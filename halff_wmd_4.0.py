@@ -30,6 +30,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 
 harpos_f = open('harpos_menu.pkl', 'rb')
 harpos = pickle.load(harpos_f)
+harpos_f.close()
 
 def titlecase(s):
     return re.sub(r"[A-Za-z]+('[A-Za-z]+)?", lambda word: word.group(0).capitalize(),s)
